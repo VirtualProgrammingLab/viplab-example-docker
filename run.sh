@@ -1,5 +1,5 @@
 #!/bin/bash
-source <(grep = $1)
+source <(grep = $1 | tr -d ' ')
 echo "Your name is $name"
 echo "Your current age: $age"
 echo "Your Christmas Wish is: $christmasWish"
