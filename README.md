@@ -2,7 +2,7 @@
 
 Small Docker container, that outputs some information, to show the functionality of ViPLab. 
 
-To execute the container, first cd into the desired directory (Shell or Python), then build it:
+To execute the container, first build it:
 
 ```
 docker build -t viplab-example-image .
