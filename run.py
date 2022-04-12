@@ -6,7 +6,7 @@ config = configparser.ConfigParser(allow_no_value=True)
 config_file = '/data/shared/params.ini'
 config.read(config_file)
 print("Your name is", config['about you']['name'])
-print("Your currenr age is", config['about you']['age'])
+print("Your current age is", config['about you']['age'])
 print("Your Christmas Wish is:", config['about you']['christmasWish'])
 print("How hot do you like to drink your Coffee?", config['coffee preference']['coffeeTemperature'])
 print("You like:", config['about you']['likedThings'])
