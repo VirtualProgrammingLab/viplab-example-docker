@@ -16,10 +16,9 @@ print("You would dance in the kitchen to:", config['about you']['dancing'])
 print("You dislike: \033[0;31m", config['about you']['dislikedThings'], "\033[0m")
 print("Your three random numbers are:", config['about you']['randomNumbers'])
 
-json_file = '/data/shared/code.json'
-f = open(json_file, "r")
-data = json.loads(f.read(), strict=False)
-codeSnippet = data['codeSnippet']
+code_file = '/data/shared/code.c'
+f = open(code_file, "r")
+codeSnippet = f.read()
 print("The Code you entered:")
 print(codeSnippet)
 f.close()
@@ -29,4 +28,4 @@ shutil.copyfile("/data/output/coffee-temp.csv", "/data/shared/coffee-temp.csv")
 shutil.copyfile("/data/output/coffee.jpg", "/data/shared/image-coffee.jpg")
 shutil.copyfile("/data/output/dance.png", "/data/shared/image-dance.png")
 shutil.copyfile("/data/shared/params.ini", "/data/shared/input.ini")
-shutil.copyfile("/data/shared/code.json", "/data/shared/input.json")
+shutil.copyfile("/data/shared/code.c", "/data/shared/input.c")
