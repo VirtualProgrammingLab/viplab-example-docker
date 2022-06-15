@@ -1,0 +1,3 @@
+http://localhost:8081/test.pdf
+http://localhost:8081/test.txt
+http://localhost:8081/voyager.png

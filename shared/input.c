@@ -1,1 +1,3 @@
-aW50IG1haW4oaW50IGFyZ2MsIGNoYXIgKiphcmd2KSB7IA0KLy8gUHJpbnQgJ0hlbGxvIFdvcmxkJyANCn0
+int main(int argc, char **argv) { 
+// Print 'Hello World' 
+}
