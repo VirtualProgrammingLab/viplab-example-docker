@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:slim
 COPY *.py /data/bin/
 COPY earth.vtp /data/output/earth.vtp
 COPY coffee-temp.csv /data/output/coffee-temp.csv
