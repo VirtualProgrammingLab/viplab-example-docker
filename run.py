@@ -18,6 +18,8 @@ print("Your look in the frige:", config['about you']['fridge'])
 print("You would dance in the kitchen to:", config['about you']['dancing'])
 print("You dislike: \033[0;31m", config['about you']['dislikedThings'], "\033[0m")
 print("Your three random numbers are:", config['about you']['randomNumbers'])
+print("You are an earthling?", config['about you']['earthling'])
+print("Muuuuh:", config['about you']['muh'])
 
 code_file = cwd + '/data/shared/code.c'
 f = open(code_file, "r")
@@ -26,8 +28,16 @@ print("The Code you entered:")
 print(codeSnippet)
 f.close()
 
-shutil.copyfile(cwd + "/data/output/earth.vtp", cwd + "/data/shared/earth.vtp")
+if config['about you']['earthling'] == 'true':
+    shutil.copyfile(cwd + "/data/output/earth.vtp", cwd + "/data/shared/earth.vtp")
+if config['about you']['muh'] == 'true':
+    shutil.copyfile(cwd + "/data/output/cow.vtp", cwd + "/data/shared/cow.vtp")
+
 shutil.copyfile(cwd + "/data/output/coffee-temp.csv", cwd + "/data/shared/coffee-temp.csv")
+shutil.copyfile(cwd + "/data/output/coffee-consumption-00000.csv", cwd + "/data/shared/coffee-consumption-00000.csv")
+shutil.copyfile(cwd + "/data/output/coffee-consumption-00001.csv", cwd + "/data/shared/coffee-consumption-00001.csv")
+shutil.copyfile(cwd + "/data/output/coffee-consumption-00002.csv", cwd + "/data/shared/coffee-consumption-00002.csv")
+shutil.copyfile(cwd + "/data/output/coffee-consumption-00003.csv", cwd + "/data/shared/coffee-consumption-00003.csv")
 shutil.copyfile(cwd + "/data/output/coffee.jpg", cwd + "/data/shared/image-coffee.jpg")
 shutil.copyfile(cwd + "/data/output/dance.png", cwd + "/data/shared/image-dance.png")
 shutil.copyfile(cwd + "/data/output/uris.txt", cwd + "/data/shared/uris.txt")
